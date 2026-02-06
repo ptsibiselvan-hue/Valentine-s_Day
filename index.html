@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beautiful Valentine's Day interactive experience">
+  <title>Be My Valentine ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main role="main">
+
+<div id="app">
+  <div class="floating-elements" id="floatingContainer"></div>
+  <div class="page-wrapper">
+
+    <!-- PAGE 1 -->
+    <section class="page" id="page1">
+      <div class="rose-decoration rose-top-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-top-right" aria-hidden="true">🌹</div>
+      
+      <div class="content-container">
+        <div class="pulse-animation" aria-hidden="true">💍</div>
+        <h1 class="gradient-text">Will You Be My Forever?</h1>
+        <p class="subtitle">My love, you are my everything. Will you marry me and make me the happiest person alive?</p>
+        
+        <div class="buttons-container">
+          <button type="button" id="yesBtn" class="btn-yes" aria-label="Yes, I will be your forever">YES! 💕</button>
+          <button type="button" id="noBtn" class="btn-no" aria-label="No button">NO</button>
+        </div>
+      </div>
+      
+      <div class="rose-decoration rose-bottom-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-bottom-right" aria-hidden="true">🌹</div>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page2">
+      <div class="rose-decoration rose-top-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-top-right" aria-hidden="true">🌹</div>
+      
+      <div class="content-container">
+        <h1 class="gradient-text">Good Choice, Baby! ✨</h1>
+        <p class="subtitle">Feeling trapped already? 😏  </p> 
+         <p class="subtitle">Don’t worry… there *might* be a way out 👀   </p>
+        
+        <div class="button-group">
+          <button type="button" id="lateBtn" class="btn-primary" aria-label="Click here button">Click Here to Escape 😌</button>
+          <p class="separator-text">─ or ─</p>
+          <button type="button" id="readLetter" class="btn-outline" aria-label="Read my letter button">📬 Read My Letter</button>
+        </div>
+      </div>
+      
+      <div class="rose-decoration rose-bottom-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-bottom-right" aria-hidden="true">🌹</div>
+    </section>
+
+    <!-- TOO LATE OVERLAY POPUP -->
+    <div id="popup" class="overlay-hidden" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <div class="popup-container">
+        <div class="popup-box">
+          <div class="popup-icon" aria-hidden="true">🎉</div>
+          <h2 id="popup-title">Too Late! 💕</h2>
+          <p>Nice try 😌  
+             There is no escape…  
+             You’re officially stuck with me forever ❤️</p>
+          <button type="button" id="goBack" class="btn-primary">Go Back</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <section class="page" id="page3">
+      <div class="rose-decoration rose-top-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-top-right" aria-hidden="true">🌹</div>
+      
+      <div class="content-container">
+        <h1 class="gradient-text">To My Dearest…</h1>
+        <div class="letter-box">
+          <p class="letter">
+            My love,<br><br>
+            Thank you for being the most amazing person in my life.
+            You make every ordinary moment feel magical.
+            I'm so lucky to have you by my side.<br><br>
+            Every day with you is a blessing.
+            Your love has transformed my world.
+            You are my greatest treasure.<br><br>
+            Forever & Always 💕
+          </p>
+        </div>
+        <button type="button" id="memories" class="btn-primary" aria-label="Go to memories page">🖼️ Our Memories</button>
+      </div>
+      
+      <div class="rose-decoration rose-bottom-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-bottom-right" aria-hidden="true">🌹</div>
+    </section>
+
+    <!-- PAGE 4 -->
+    <section class="page" id="page4">
+      <div class="rose-decoration rose-top-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-top-right" aria-hidden="true">🌹</div>
+      
+      <div class="content-container">
+        <h1 class="gradient-text">Our Beautiful Moments 📸</h1>
+        <p class="subtitle">Click on the hearts to reveal memories (click again to hide)</p>
+        <div class="grid">
+          <div class="heart-card" data-img="p1.jpeg" role="button" tabindex="0" aria-label="Memory 1">
+            <div class="heart-icon" aria-hidden="true">💕</div>
+            <div class="heart-image">
+              <picture>
+                <source srcset="images/p1.jpeg" type="image/jpeg">
+                <img src="images/p1.jpeg" alt="Beautiful memory 1" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="heart-card" data-img="p2.jpeg" role="button" tabindex="0" aria-label="Memory 2">
+            <div class="heart-icon" aria-hidden="true">💕</div>
+            <div class="heart-image">
+              <picture>
+                <source srcset="images/p2.jpeg" type="image/jpeg">
+                <img src="images/p2.jpeg" alt="Beautiful memory 2" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="heart-card" data-img="p3.jpeg" role="button" tabindex="0" aria-label="Memory 3">
+            <div class="heart-icon" aria-hidden="true">💕</div>
+            <div class="heart-image">
+              <picture>
+                <source srcset="images/p3.jpeg" type="image/jpeg">
+                <img src="images/p3.jpeg" alt="Beautiful memory 3" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="heart-card" data-img="p4.png" role="button" tabindex="0" aria-label="Memory 4">
+            <div class="heart-icon" aria-hidden="true">💕</div>
+            <div class="heart-image">
+              <picture>
+                <source srcset="images/p4.png" type="image/png">
+                <img src="images/p4.png" alt="Beautiful memory 4" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="heart-card" data-img="p5.jpeg" role="button" tabindex="0" aria-label="Memory 5">
+            <div class="heart-icon" aria-hidden="true">💕</div>
+            <div class="heart-image">
+              <picture>
+                <source srcset="images/p5.jpeg" type="image/jpeg">
+                <img src="images/p5.jpeg" alt="Beautiful memory 5" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="heart-card" data-img="p6.jpeg" role="button" tabindex="0" aria-label="Memory 6">
+            <div class="heart-icon" aria-hidden="true">💕</div>
+            <div class="heart-image">
+              <picture>
+                <source srcset="images/p6.jpeg" type="image/jpeg">
+                <img src="images/p6.jpeg" alt="Beautiful memory 6" loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="playPuzzle" class="btn-primary" aria-label="Go to puzzle game">🧩 Solve My Puzzle</button>
+      </div>
+      
+      <div class="rose-decoration rose-bottom-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-bottom-right" aria-hidden="true">🌹</div>
+    </section>
+
+    <!-- PAGE 5 -->
+    <section class="page" id="page5">
+      <div class="rose-decoration rose-top-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-top-right" aria-hidden="true">🌹</div>
+      
+      <div class="content-container">
+        <h1 class="gradient-text">Fix My Heart 🧩</h1>
+        <p class="subtitle">Put the pieces together to fix my heart</p>
+        <div class="puzzle" id="puzzle" role="region" aria-label="Puzzle game grid"></div>
+        <div class="puzzle-controls">
+          <button type="button" id="shuffle" class="btn-secondary" aria-label="Shuffle puzzle pieces">🔀 Shuffle</button>
+          <button type="button" id="whyLove" class="btn-primary" aria-label="Skip puzzle and see reasons">💭 Why I Love You</button>
+        </div>
+      </div>
+      
+      <div class="rose-decoration rose-bottom-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-bottom-right" aria-hidden="true">🌹</div>
+    </section>
+
+    <!-- PAGE 6 -->
+    <section class="page" id="page6">
+      <div class="rose-decoration rose-top-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-top-right" aria-hidden="true">🌹</div>
+      
+      <div class="content-container">
+        <h1 class="gradient-text">10 Reasons Why I Love You ❤️</h1>
+        <div class="reasons-box">
+          <ol>
+            <li>You are my safest place</li>
+            <li>Your smile melts me completely</li>
+            <li>You make me laugh like no one else</li>
+            <li>You care about every detail</li>
+            <li>You are beautiful inside & out</li>
+            <li>You support me always</li>
+            <li>Your hand fits mine perfectly</li>
+            <li>You make me a better person</li>
+            <li>Your voice is my favorite sound</li>
+            <li>Life is infinitely better with you</li>
+          </ol>
+        </div>
+        <button type="button" id="final" class="btn-primary" aria-label="Go to final surprise page">🎁 Final Surprise</button>
+      </div>
+      
+      <div class="rose-decoration rose-bottom-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-bottom-right" aria-hidden="true">🌹</div>
+    </section>
+
+    <!-- PAGE 7 -->
+    <section class="page" id="page7">
+      <div class="fireworks-container" id="fireworksContainer" aria-hidden="true"></div>
+      <div class="confetti-container" id="confettiContainer" aria-hidden="true"></div>
+      <div class="sky-burst" id="skyBurst" aria-hidden="true"></div>
+      
+      <div class="rose-decoration rose-top-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-top-right" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-center" aria-hidden="true">🌹</div>
+      
+      <div class="content-container celebration">
+        <div class="pulse-glow" aria-hidden="true"></div>
+        <h1 class="gradient-text celebration-text glow-text">Happy Valentine's Day Baby! 💕</h1>
+        <p class="subtitle celebration-subtitle">From the moment you came into my life, everything felt complete 🌍💕</p>
+        <p class="love-message">Loving you is the easiest and most beautiful thing my heart has ever done 💕 </p>
+        <div class="heart-burst" aria-hidden="true"></div>
+      </div>
+      
+      <div class="rose-decoration rose-bottom-left" aria-hidden="true">🌹</div>
+      <div class="rose-decoration rose-bottom-right" aria-hidden="true">🌹</div>
+    </section>
+
+  </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
